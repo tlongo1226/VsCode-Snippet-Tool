@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Format for Snippet",
+        "type": "shell",
+        "command": "/usr/local/bin/process_snippet.sh",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Snippetify Clipboard",
+        "type": "shell",
+        "command": "powershell.exe",
+        "args": [
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "C:\\scripts\\run_snippetify.ps1"
+        ],
+        "presentation": {
+          "echo": true,
+          "reveal": "never",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Open Snippet GUI",
+        "type": "shell",
+        "command": "python",
+        "args": ["C:\\scripts\\snippet_tool\\snippet_gui.py"],
+        "presentation": {
+          "reveal": "never"
+        }
+      }
+  ]
+}
